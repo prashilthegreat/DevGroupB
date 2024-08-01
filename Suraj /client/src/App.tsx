@@ -1,7 +1,7 @@
 function App() {
   return (
     <main>
-      <p>HEllO WORLD </p>
+      <p>Git Text</p>
     </main>
   );
 }
