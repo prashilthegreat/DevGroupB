@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Haizhong_s363429", "Haizhong_s363429", "{E7DCE94C-CE3B-4346-9FC3-92C904C1D3E2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Week1", "Week1", "{F9F67726-DF73-447F-91C2-2CE8176B356B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorld", "Haizhong_s363429\Week1\HelloWorld\HelloWorld.csproj", "{893725F0-8A67-4006-AAE1-DF11322457FA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{893725F0-8A67-4006-AAE1-DF11322457FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{893725F0-8A67-4006-AAE1-DF11322457FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{893725F0-8A67-4006-AAE1-DF11322457FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{893725F0-8A67-4006-AAE1-DF11322457FA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F9F67726-DF73-447F-91C2-2CE8176B356B} = {E7DCE94C-CE3B-4346-9FC3-92C904C1D3E2}
+		{893725F0-8A67-4006-AAE1-DF11322457FA} = {F9F67726-DF73-447F-91C2-2CE8176B356B}
+	EndGlobalSection
+EndGlobal
