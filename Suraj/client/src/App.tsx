@@ -6,7 +6,7 @@ function App() {
   return (
     <main>
      
-      <Container children={undefined}>
+      <Container>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima,
           voluptatibus. Dolorem rerum animi temporibus porro delectus? Eum
