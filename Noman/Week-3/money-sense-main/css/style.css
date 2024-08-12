@@ -1,0 +1,11 @@
+/* calculate side */
+.calculate-bg{
+    background-color: #F8F8F8;
+    padding: 0 50px;
+
+}
+.calculate-button{
+    padding: 8px 30px;
+    border-radius: 4px;
+    font-size: 20px;
+}
