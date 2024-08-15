@@ -44,8 +44,7 @@ class _SearchPageState extends State<SearchPage> {
       isLoading = true;
     });
 
-    const String apiKey =
-        'sk-L8uJwocC1CHLHcKkRdnDgciOuGT34U2oI4IIiXyoYDT3BlbkFJms-ghW_wMHq4aEOYMyE4SRRdmz1WJBTFR1xlnlf7MA';
+    const String apiKey = 'HIDDEN API KEY SORRY';
     const String apiUrl = 'https://api.openai.com/v1/chat/completions';
 
     final initialResponse = await http.post(
