@@ -50,8 +50,7 @@ class _SearchPageState extends State<SearchPage> {
         Can you extract the metrics from the user's input and assign a rank from 1-5 for every single metric depending on the user's prompt? Don't need explanations just ranks The following is the users' prompt:''';
 
     // Replace with your OpenAI API key
-    const String apiKey =
-        'sk-L8uJwocC1CHLHcKkRdnDgciOuGT34U2oI4IIiXyoYDT3BlbkFJms-ghW_wMHq4aEOYMyE4SRRdmz1WJBTFR1xlnlf7MA';
+    const String apiKey = '';
     const String apiUrl = 'https://api.openai.com/v1/chat/completions';
 
     final initialResponse = await http.post(
