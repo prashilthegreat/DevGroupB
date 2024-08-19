@@ -1,21 +1,41 @@
 using Microsoft.AspNetCore.Mvc;
 using MyMvcApp.Models;
-using System.Collections.Generic;
+using System.Linq;
 
 namespace MyMvcApp.Controllers
 {
     public class ProductController : Controller
     {
+        private readonly ApplicationDbContext _context;
+
+        // 将 ApplicationDbContext 注入到控制器中
+        public ProductController(ApplicationDbContext context)
+        {
+            _context = context;
+        }
+
         public IActionResult Index()
         {
-            var products = new List<Product>
-            {
-                new Product { Id = 1, Name = "Laptop", Price = 999.99m },
-                new Product { Id = 2, Name = "Smartphone", Price = 699.99m },
-                new Product { Id = 3, Name = "Tablet", Price = 499.99m }
-            };
-
+            // 从数据库中获取产品列表
+            var products = _context.Products.ToList();
             return View(products);
+        }
+
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Create(Product product)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Products.Add(product);
+                _context.SaveChanges();
+                return RedirectToAction(nameof(Index));
+            }
+            return View(product);
         }
     }
 }

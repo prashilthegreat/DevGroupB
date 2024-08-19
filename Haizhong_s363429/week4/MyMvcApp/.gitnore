@@ -1,0 +1,38 @@
+# Ignore Visual Studio temporary files, build results, and
+# Including obj and bin folders
+bin/
+obj/
+
+# Ignore user-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Ignore build output
+*.dll
+*.exe
+*.log
+*.pdb
+*.cache
+*.ilk
+*.pyc
+*.pyo
+*.tmp
+
+# Ignore packages
+*.nupkg
+*.snupkg
+
+# Ignore Visual Studio Code files
+.vscode/
+
+# Ignore Rider IDE files
+.idea/
+
+# Ignore JetBrains Rider project settings
+.idea/
+
+# Ignore MacOS and Linux system files
+.DS_Store
+
