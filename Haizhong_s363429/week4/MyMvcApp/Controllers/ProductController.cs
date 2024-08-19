@@ -21,11 +21,47 @@ namespace MyMvcApp.Controllers
             return View(products);
         }
 
+        // 删除产品 - 显示确认页面
+        public IActionResult Delete(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var product = _context.Products
+                .FirstOrDefault(m => m.Id == id);
+
+            if (product == null)
+            {
+                return NotFound();
+            }
+
+            return View(product);
+        }
+
+        // 删除产品 - 确认后执行删除操作
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public IActionResult DeleteConfirmed(int id)
+        {
+            var product = _context.Products.Find(id);
+            if (product != null)
+            {
+                _context.Products.Remove(product);
+                _context.SaveChanges(); // 保存更改到数据库
+            }
+
+            return RedirectToAction(nameof(Index)); // 重定向回到产品列表
+        }
+
+        // 显示创建产品的页面
         public IActionResult Create()
         {
             return View();
         }
 
+        // 处理创建产品的表单提交
         [HttpPost]
         public IActionResult Create(Product product)
         {
@@ -37,5 +73,5 @@ namespace MyMvcApp.Controllers
             }
             return View(product);
         }
-    }
-}
+    } // 这个花括号关闭了 ProductController 类
+} // 这个花括号关闭了命名空间
