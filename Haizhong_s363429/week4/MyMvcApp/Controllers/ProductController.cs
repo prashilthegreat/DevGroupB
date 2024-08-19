@@ -54,6 +54,41 @@ namespace MyMvcApp.Controllers
 
             return RedirectToAction(nameof(Index)); // 重定向回到产品列表
         }
+        // 显示编辑表单 (GET)
+        public IActionResult Edit(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var product = _context.Products.Find(id);
+            if (product == null)
+            {
+                return NotFound();
+            }
+
+            return View(product); // 返回编辑视图并传递产品模型
+        }
+
+        // 处理编辑表单提交 (POST)
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Edit(int id, Product product)
+        {
+            if (id != product.Id)
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                _context.Update(product); // 更新产品
+                _context.SaveChanges(); // 保存更改到数据库
+                return RedirectToAction(nameof(Index)); // 重定向回产品列表
+            }
+            return View(product); // 如果模型验证失败，返回编辑视图并显示错误
+        }
 
         // 显示创建产品的页面
         public IActionResult Create()
