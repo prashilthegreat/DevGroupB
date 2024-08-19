@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money Sense</title>
+    <!-- Bootstrap CSS link add here -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- My custom CSS link added here -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="container">
+    <header class="my-3 text-info d-flex justify-content-center">
+        <h1 class="text-center">Money Sense</h1>
+        <img width="50px" class="ms-3" src="images/money-bag.png" alt="">
+    </header>
+
+    <main class="mb-3">
+        <div class="row row-cols-lg-2 row-cols-1">
+            <div class="col">
+                <img height="750px" src="images/money.jpeg" class="img-fluid" alt="">
+            </div>
+            <div class="col calculate-bg rounded-3">
+                <!--------------------------------
+                    Income section starts here 
+                 --------------------------------->
+                <section>
+                    <h5 class="text-center mt-3">Income</h5>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput">Income</label>
+                        <input type="text" class="form-control w-75" id="income-field" placeholder="Income">
+                    </div>
+                </section>
+                <!-- Income section ends here  -->
+
+                <!--------------------------------
+                        Expenses section starts here 
+                     --------------------------------->
+                <section>
+                    <h5 class="text-center mt-3">Expenses</h5>
+                    <div class="form-group mb-1">
+                        <label for="formGroupExampleInput">Food</label>
+                        <input type="text" class="form-control w-75" id="food-field" placeholder="Food Cost">
+                    </div>
+                    <div class="form-group mb-1">
+                        <label for="formGroupExampleInput">Rent</label>
+                        <input type="text" class="form-control w-75" id="rent-field" placeholder="Rent Cost">
+                    </div>
+                    <div class="form-group mb-2">
+                        <label for="formGroupExampleInput">Cloth</label>
+                        <input type="text" class="form-control w-75" id="cloth-field" placeholder="Cloth Cost">
+                    </div>
+                    <button type="button" class="btn btn-primary" id="calculate-button">Calculate</button>
+                    <div>
+                        <h6 class=" mt-3">Total Expenses: <span id="show-expenses"></span></h6>
+                        <h6 class="">Balance: <span id="show-balance"></span></h6>
+                    </div>
+                </section>
+                <!-- Expenses section ends here  -->
+
+                <!--------------------------------
+                        Saving section starts here 
+                     --------------------------------->
+                <section>
+                    <h5 class="text-center">Savings</h5>
+                    <div class="form-group mb-2">
+                        <label for="formGroupExampleInput">Save</label>
+                        <input type="text" class="form-control w-75" id="savings-field" placeholder="Savings in %">
+
+                    </div>
+                    <button type="button" class="btn btn-primary" id="savings-button">Save</button>
+
+                    <!-- Total expenses and balance -->
+                    <h6 class="mt-3">Saving Amount: <span id="show-savings"></span></h6>
+                    <h6 class="">Remaining Balance: <span id="show-remaining"></span></h6>
+                </section>
+                <!-- saving section ends here  -->
+            </div>
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
