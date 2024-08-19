@@ -1,20 +1,25 @@
-import Container from "./ui/Container";
-import Footer from "./ui/Footer";
-import Header from "./ui/Header";
+import "react-multi-carousel/lib/styles.css";
+import BannerCategories from "./ui/BannerCategories";
+import HomeBanner from "./ui/HomeBanner";
+import Hightlights from "./ui/Highlights";
+import Categories from "./ui/Categories";
+import ProductList from "./ui/ProductList";
+import DiscountedBanner from "./ui/DiscountedBanner";
+import Blog from "./ui/Blog";
 
 function App() {
   return (
     <main>
-     
-      <Container>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima,
-          voluptatibus. Dolorem rerum animi temporibus porro delectus? Eum
-          cupiditate, debitis recusandae ipsam beatae facilis eos obcaecati
-          earum provident, cumque quae blanditiis.
-        </p>
-      </Container>
-
+      <BannerCategories />
+      <HomeBanner />
+      <Hightlights />
+      <Categories />
+      {/* ProductList */}
+      <ProductList />
+      {/* DiscountedBanner */}
+      <DiscountedBanner />
+      {/* Blog */}
+      <Blog />
     </main>
   );
 }
