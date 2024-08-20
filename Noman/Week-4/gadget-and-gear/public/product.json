@@ -1,0 +1,62 @@
+[
+    {
+        "id": "623e1227d478b22319143865",
+        "price": 463,
+        "name": "Macbook",
+        "imgUrl": "https://i.ibb.co/9sF10kR/apple.jpg"
+    },
+    {
+        "id": "623e1227b85676b155388bbb",
+        "price": 397,
+        "name": "HP",
+        "imgUrl": "https://i.ibb.co/sCB64BH/hp.webp"
+    },
+    {
+        "id": "623e1227b57a033ee9f49952",
+        "price": 434,
+        "name": "Lenovo",
+        "imgUrl": "https://i.ibb.co/fndv79f/lenovo.webp"
+    },
+    {
+        "id": "623e12278d5bb5101e2be903",
+        "price": 586,
+        "name": "Dell RX-500",
+        "imgUrl": "https://i.ibb.co/RTPwLyR/dell.jpg"
+    },
+    {
+        "id": "623e1227fcf20ba6977c22ea",
+        "price": 233,
+        "name": "Acer",
+        "imgUrl": "https://i.ibb.co/sFnTLx7/acer.jpg"
+    },
+    {
+        "id": "623e12271bb5e0c57c373064",
+        "price": 498,
+        "name": "Asus",
+        "imgUrl": "https://i.ibb.co/frwdqfk/asus.jpg"
+    },
+    {
+        "id": "623e1227055f1b33cf7957b6",
+        "price": 662,
+        "name": "MSI",
+        "imgUrl": "https://i.ibb.co/TcB5GR1/msi.jpg"
+    },
+    {
+        "id": "623e1227252b2859733097bd",
+        "price": 433,
+        "name": "Razer",
+        "imgUrl": "https://i.ibb.co/K5WYs35/razer.jpg"
+    },
+    {
+        "id": "623e12274cc41eadc5fd5f9b",
+        "price": 454,
+        "name": "Samsung",
+        "imgUrl": "https://i.ibb.co/y6ZmXQb/Samsung-Galaxy-Book-Flex-and-Galaxy-Book-min.png"
+    },
+    {
+        "id": "623e1227e07089ccd5e3425f",
+        "price": 560,
+        "name": "Microsoft",
+        "imgUrl": "https://i.ibb.co/prm9qHf/microsoft.webp"
+    }
+]

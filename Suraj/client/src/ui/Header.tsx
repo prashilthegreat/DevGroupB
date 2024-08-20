@@ -1,61 +1,73 @@
-import React, { useEffect, useState } from 'react';
-import { logo } from '../assets';
-import { IoClose, IoSearchOutline } from 'react-icons/io5';
-import { FiUser, FiStar, FiShoppingBag } from 'react-icons/fi';
-import { FaChevronDown } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
-import { Menu, MenuButton, Transition, MenuItems, MenuItem } from '@headlessui/react';
-import Container from './Container';
+import { useEffect, useState } from "react";
+import {
+  Menu,
+  MenuButton,
+  MenuItem,
+  MenuItems,
+  Transition,
+} from "@headlessui/react";
+import { FaChevronDown } from "react-icons/fa";
+import { FiShoppingBag, FiStar, FiUser } from "react-icons/fi";
+import { IoClose, IoSearchOutline } from "react-icons/io5";
+import { Link } from "react-router-dom";
+import { logo } from "../assets";
+import Container from "./Container";
+import { config } from "../../config";
+import { getData } from "../lib";
+import { CategoryProps, ProductProps } from "../../type";
+import ProductCard from "./ProductCard";
+import { store } from "../lib/store";
 
 const bottomNavigation = [
-    { title: "Home", link: "/" },
-    { title: "Shop", link: "/product" },
-    { title: "Cart", link: "/cart" },
-    { title: "Orders", link: "/orders" },
-    { title: "My Account", link: "/profile" },
-    { title: "Blog", link: "/blog" },
-  ];
-  const Header = () => {
-    const [searchText, setSearchText] = useState("");
-    const [categories, setCategories] = useState([]);
-    const [products, setProducts] = useState([]);
-    const [filteredProducts, setFilteredProducts] = useState([]);
-    const { cartProduct, favoriteProduct, currentUser } = store();
-    useEffect(() => {
-      const fetchData = async () => {
-        const endpoint = `${config?.baseUrl}/products`;
-        try {
-          const data = await getData(endpoint);
-          setProducts(data);
-        } catch (error) {
-          console.error("Error fetching data", error);
-        }
-      };
-      fetchData();
-    }, []);
-  
-    useEffect(() => {
-      const fetchData = async () => {
-        const endpoint = `${config?.baseUrl}/categories`;
-        try {
-          const data = await getData(endpoint);
-          setCategories(data);
-        } catch (error) {
-          console.error("Error fetching data", error);
-        }
-      };
-      fetchData();
-    }, []);
-  
-    useEffect(() => {
-      const filtered = products.filter((item: ProductProps) =>
-        item.name.toLowerCase().includes(searchText.toLowerCase())
-      );
-      setFilteredProducts(filtered);
-    }, [searchText]);
-  return (
+  { title: "Home", link: "/" },
+  { title: "Shop", link: "/product" },
+  { title: "Cart", link: "/cart" },
+  { title: "Orders", link: "/orders" },
+  { title: "My Account", link: "/profile" },
+  { title: "Blog", link: "/blog" },
+];
 
-       <div className="w-full bg-whiteText md:sticky md:top-0 z-50">
+const Header = () => {
+  const [searchText, setSearchText] = useState("");
+  const [categories, setCategories] = useState([]);
+  const [products, setProducts] = useState([]);
+  const [filteredProducts, setFilteredProducts] = useState([]);
+  const { cartProduct, favoriteProduct, currentUser } = store();
+  useEffect(() => {
+    const fetchData = async () => {
+      const endpoint = `${config?.baseUrl}/products`;
+      try {
+        const data = await getData(endpoint);
+        setProducts(data);
+      } catch (error) {
+        console.error("Error fetching data", error);
+      }
+    };
+    fetchData();
+  }, []);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const endpoint = `${config?.baseUrl}/categories`;
+      try {
+        const data = await getData(endpoint);
+        setCategories(data);
+      } catch (error) {
+        console.error("Error fetching data", error);
+      }
+    };
+    fetchData();
+  }, []);
+
+  useEffect(() => {
+    const filtered = products.filter((item: ProductProps) =>
+      item.name.toLowerCase().includes(searchText.toLowerCase())
+    );
+    setFilteredProducts(filtered);
+  }, [searchText]);
+
+  return (
+    <div className="w-full bg-whiteText md:sticky md:top-0 z-50">
       <div className="max-w-screen-xl mx-auto h-20 flex items-center justify-between px-4 lg:px-0">
         {/* Logo */}
         <Link to={"/"}>
@@ -184,7 +196,3 @@ const bottomNavigation = [
 };
 
 export default Header;
-
-function getData(_endpoint: string) {
-    throw new Error('Function not implemented.');
-}
