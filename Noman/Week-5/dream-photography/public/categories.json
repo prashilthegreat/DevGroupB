@@ -1,0 +1,44 @@
+[
+    {
+        "id": "625c10e6e4fa0a8c27fa7170",
+        "price": "$132",
+        "category": "Birthday",
+        "description": "Count your age by friends, not years. Count your life by smiles, not tears. I hope your celebration gives you many happy memories!",
+        "img": "https://i.ibb.co/2vbQFYP/birthday.jpg"
+    },
+    {
+        "id": "625c10e6fc0835be8d03d89f",
+        "price": "$201",
+        "category": "Wedding",
+        "description": "The beauty of wedding photography lies in the natural reactions of the people. It clicks their best emotions and brings out the feelings of moment through a picture.",
+        "img": "https://i.ibb.co/bXJJGFn/wedding.jpg"
+    },
+    {
+        "id": "625c10e6aefd72be1c585c0c",
+        "price": "$274",
+        "category": "Fashion",
+        "description": "What you wear is how you present yourself to the world, especially today, when human contacts are so quick. Fashion is instant language.",
+        "img": "https://i.ibb.co/Rg5v7wC/fashion.jpg"
+    },
+    {
+        "id": "625c10e6ad6a37d5f8a02c84",
+        "price": "$194",
+        "category": "Commercial",
+        "description": "Commercial photography is a genre that encompasses any photos used for a business or publication. It's photography that helps sell things.",
+        "img": "https://i.ibb.co/xzNMymm/e-commerce.jpg"
+    },
+    {
+        "id": "625c10e6cc238ceabd1b06a7",
+        "price": "$343",
+        "category": "Engagement",
+        "description": "This is some of the best news of your entire life, and your friends and family are probably on the edge of their seats waiting to hear your announcement.",
+        "img": "https://i.ibb.co/jGmQnNp/engagement.jpg"
+    },
+    {
+        "id": "625c10e67dc20e8f1a02725b",
+        "price": "$343",
+        "category": "Seminar",
+        "description": "There's no seminar in the world that will give you multi million-dollar advice on building a business from scratch! Make your seminar special.",
+        "img": "https://i.ibb.co/pyw1Gft/seminar.jpg"
+    }
+]
